@@ -1,0 +1,326 @@
+ctjsVersion: 4.0.2
+backups: 3
+language: typescript
+notes: /* empty */
+libs:
+  place:
+    gridX: 1024
+    gridY: 1024
+  pointer: {}
+  keyboard: {}
+  keyboard.polyfill: {}
+  pointer.polyfill: {}
+startroom: -1
+contentTypes: []
+actions: []
+scripts: []
+assets:
+  - type: room
+    oncreate: ''
+    onstep: ''
+    ondraw: ''
+    onleave: ''
+    gridX: 32
+    gridY: 32
+    diagonalGrid: false
+    disableGrid: false
+    simulate: true
+    width: 960
+    height: 640
+    restrictCamera: false
+    restrictMaxX: 1280
+    restrictMinX: 1280
+    restrictMaxY: 720
+    restrictMinY: 720
+    isUi: false
+    name: Room1
+    backgroundColor: '#000000'
+    follow: -1
+    backgrounds:
+      - depth: 0
+        texture: JnGMGD3DLNKtqT
+        shiftX: 0
+        shiftY: 0
+        parallaxX: 1
+        parallaxY: 1
+        movementX: 0
+        movementY: 0
+        scaleX: 1
+        scaleY: 1
+        repeat: repeat
+    copies:
+      - x: 256
+        'y': 192
+        opacity: 1
+        tint: 16777215
+        scale:
+          x: 1
+          'y': 1
+        rotation: 0
+        uid: nQwwkkmR4Tkjqm
+        exts: {}
+        customProperties: {}
+        bindings: {}
+      - x: 128
+        'y': 256
+        opacity: 1
+        tint: 16777215
+        scale:
+          x: 1
+          'y': 1
+        rotation: 0
+        uid: Q3McwLWzW6771L
+        exts: {}
+        customProperties: {}
+        bindings: {}
+      - x: 64
+        'y': 192
+        opacity: 1
+        tint: 16777215
+        scale:
+          x: 1
+          'y': 1
+        rotation: 0
+        uid: CcfmQhBCq4TDkP
+        exts: {}
+        customProperties: {}
+        bindings: {}
+    tiles: []
+    extends: {}
+    lastmod: 1710891584229
+    events: []
+    behaviors: []
+    uid: h5RcjpDrhqTD9C
+  - lastmod: 1710890974859
+    type: texture
+    name: T_Fondo
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: iJnGMGD3DLNKtqT.png
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: JnGMGD3DLNKtqT
+    padding: 0
+    isBlank: false
+    source: 'E:\win\Videos\Captures\T_Fondo.png'
+    tiled: true
+  - lastmod: 1710891384262
+    type: texture
+    name: T_SnakeHead
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: i7n1mJjPQqR1CwF.png
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: 7n1mJjPQqR1CwF
+    padding: 1
+    isBlank: false
+    source: 'E:\win\Videos\Captures\T_SnakeHead.png'
+    r: 16
+    stripPoints:
+      - x: 0
+        'y': -16
+      - x: 15
+        'y': -5
+      - x: 9
+        'y': 13
+      - x: -9
+        'y': 13
+      - x: -15
+        'y': -5
+    closedStrip: true
+  - lastmod: 1710891406482
+    type: texture
+    name: T_SnakeBody
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: irT8rmd3WNkw25T.png
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: rT8rmd3WNkw25T
+    padding: 1
+    isBlank: false
+    source: 'E:\win\Videos\Captures\T_SnakeBody.png'
+    r: 16
+  - lastmod: 1710891419946
+    type: texture
+    name: T_SnakeFood
+    untill: 0
+    grid:
+      - 1
+      - 1
+    axis:
+      - 0
+      - 0
+    marginx: 0
+    marginy: 0
+    imgWidth: 32
+    imgHeight: 32
+    width: 32
+    height: 32
+    offx: 0
+    offy: 0
+    origname: i5KPmJb2jFFpQQg.png
+    shape: rect
+    left: 0
+    right: 32
+    top: 0
+    bottom: 32
+    uid: 5KPmJb2jFFpQQg
+    padding: 1
+    isBlank: false
+    source: 'E:\win\Videos\Captures\T_SnakeFood.png'
+    r: 16
+  - type: template
+    baseClass: AnimatedSprite
+    name: BP_SnakeFood
+    depth: 0
+    texture: 5KPmJb2jFFpQQg
+    playAnimationOnStart: false
+    loopAnimation: true
+    animationFPS: 30
+    visible: true
+    events:
+      - eventKey: OnStep
+        lib: core
+        code: this.move();
+        arguments: {}
+    extends: {}
+    lastmod: 1710891466544
+    uid: nQwwkkmR4Tkjqm
+    behaviors: []
+  - type: template
+    baseClass: AnimatedSprite
+    name: BP_SnakeHead
+    depth: 0
+    texture: 7n1mJjPQqR1CwF
+    playAnimationOnStart: false
+    loopAnimation: true
+    animationFPS: 30
+    visible: true
+    events:
+      - eventKey: OnStep
+        lib: core
+        code: this.move();
+        arguments: {}
+    extends: {}
+    lastmod: 1710891475953
+    uid: CcfmQhBCq4TDkP
+    behaviors: []
+  - type: template
+    baseClass: AnimatedSprite
+    name: BP_SnakeBody
+    depth: 0
+    texture: rT8rmd3WNkw25T
+    playAnimationOnStart: false
+    loopAnimation: true
+    animationFPS: 30
+    visible: true
+    events:
+      - eventKey: OnStep
+        lib: core
+        code: this.move();
+        arguments: {}
+    extends: {}
+    lastmod: 1710891479889
+    uid: Q3McwLWzW6771L
+    behaviors: []
+settings:
+  authoring:
+    author: ''
+    site: ''
+    title: ''
+    version:
+      - 0
+      - 0
+      - 0
+    versionPostfix: ''
+    appId: ''
+  rendering:
+    usePixiLegacy: false
+    transparent: false
+    maxFPS: 60
+    pixelatedrender: true
+    highDensity: false
+    desktopMode: maximized
+    hideCursor: false
+    mobileScreenOrientation: unspecified
+    viewMode: scaleFit
+  export:
+    autocloseDesktop: true
+    windows: true
+    linux: true
+    mac: true
+    functionWrap: false
+    codeModifier: none
+    bundleAssetTree: false
+    bundleAssetTypes:
+      texture: true
+      template: true
+      room: true
+      behavior: false
+      font: false
+      sound: false
+      style: false
+      tandem: false
+      script: false
+  branding:
+    accent: '#446adb'
+    invertPreloaderScheme: true
+    icon: -1
+    splashScreen: -1
+    forceSmoothIcons: false
+    forceSmoothSplashScreen: false
+    hideLoadingLogo: false
+    alternativeLogo: false
+    customLoadingText: ''
+  fps: 30
+palette: []
